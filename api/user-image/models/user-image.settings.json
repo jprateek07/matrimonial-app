@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "UserImage",
+  "info": {
+    "name": "UserImage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "via": "user_images",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "image_url": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

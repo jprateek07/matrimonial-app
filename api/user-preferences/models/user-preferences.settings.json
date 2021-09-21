@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "UserPreferences",
+  "info": {
+    "name": "UserPreferences",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "via": "user_preference",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "marital_status": {
+      "type": "enumeration",
+      "enum": [
+        "Unmarried",
+        "married",
+        "divorced",
+        "widow"
+      ]
+    },
+    "colour_complexion": {
+      "type": "string"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "religion": {
+      "type": "string"
+    },
+    "caste": {
+      "type": "string"
+    },
+    "sub_caste": {
+      "type": "string"
+    },
+    "mother_tongue": {
+      "type": "string"
+    },
+    "education": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "kind": "collectionType",
+  "collectionName": "UserProfile",
+  "info": {
+    "name": "UserProfile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "via": "user_profile",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "height": {
+      "type": "decimal",
+      "required": true,
+      "min": 2
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "required": true
+    },
+    "religion": {
+      "type": "string",
+      "required": true
+    },
+    "caste": {
+      "type": "string",
+      "required": true
+    },
+    "sub_caste": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "marital_status": {
+      "type": "enumeration",
+      "enum": [
+        "unmarried",
+        "married",
+        "divorced",
+        "widow",
+        "others"
+      ],
+      "required": true
+    },
+    "education": {
+      "type": "text",
+      "required": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "physical_status": {
+      "type": "string"
+    },
+    "drink": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "mother_tongue": {
+      "type": "string",
+      "required": true
+    },
+    "color_complexion": {
+      "type": "string",
+      "required": true
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true,
+      "min": 10
+    },
+    "blood_group": {
+      "type": "string",
+      "required": true
+    },
+    "smoke": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "occupation": {
+      "type": "text",
+      "required": true
+    },
+    "annual_income": {
+      "type": "float",
+      "required": true
+    },
+    "fathers_occupation": {
+      "type": "text"
+    },
+    "mothers_occupation": {
+      "type": "text"
+    },
+    "number_of_brother": {
+      "type": "integer",
+      "required": true
+    },
+    "number_of_sister": {
+      "type": "integer"
+    },
+    "about_me": {
+      "type": "text",
+      "required": false
+    },
+    "dob": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

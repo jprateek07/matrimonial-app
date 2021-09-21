@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "UserConnections",
+  "info": {
+    "name": "UserConnections"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "requestor_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_connection"
+    },
+    "requested_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_connection"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "pending",
+        "rejected"
+      ],
+      "default": "pending",
+      "required": false
+    }
+  }
+}
