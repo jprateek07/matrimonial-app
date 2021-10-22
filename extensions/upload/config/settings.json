@@ -1,0 +1,11 @@
+{  
+    "provider": "aws-s3",  
+    "providerOptions": {
+      "accessKeyId": "AKIAYQKOU7Y4I4WKRWVT",
+      "secretAccessKey": "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",
+      "region": "ap-south-1",
+      "params": {
+        "Bucket": "kt-matrimony"
+      }
+   }
+}
